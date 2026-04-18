@@ -1,0 +1,237 @@
+/* Global Reset & Typography */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Noto Kufi Arabic", sans-serif; /* UI Term from 2nd code */
+    scroll-behavior: smooth;
+    transition: 0.3s ease;
+}
+
+:root {
+    --color: #f00;
+    --lightest: #ffe2d4;
+    --light: #fcb8a9;
+    --acent-color: #ff675b;
+    --dark: #AD2519;
+    --darkest: #5f1914;
+}
+
+body {
+    background: var(--darkest); /* Switched to darkest for better contrast */
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+/* Layout Containers */
+.player-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-direction: row;
+    gap: 20px;
+}
+
+/* UI Elements - Using Widget Style from 2nd Code */
+.scroll {
+    width: 100%;
+    height: 80%;
+    overflow-y: auto;
+    background: rgba(255, 255, 255, 0.07); /* Glass effect */
+       /* Border style from 2nd code */
+    border-radius: 16px;
+    padding: 15px;
+}
+
+.s-b {
+    border-radius: 8px;
+    width: 95%;
+    height: 70px;
+    padding: 10px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid transparent;
+    margin-bottom: 10px;
+}
+
+.s-b:hover {
+    background: var(--lightest);
+    color: var(--darkest);
+    
+    transform: translateY(-2px);
+}
+
+/* Typography */
+h1, h2, h4 {
+    color: var(--lightest);
+    margin-bottom: 10px;
+}
+
+h1{
+    font-size: clamp(32px,5vw,50px);
+    font-weight: 800;
+    color: var(--lightest);
+}
+h2{
+    color: var(--lightest);
+    font-size: 40px;
+    margin-block: 10px;
+}
+
+/* Images */
+img {
+    width: 250px;
+    height: 250px;
+    border-radius: 12px;
+    border: 1px solid var(--lightest);
+    object-fit: cover;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Buttons - Using .btn & .rbtn styles from 2nd code */
+button, .rbtn {
+    width: 50px;
+    height: 50px;
+    border: 1px solid var(--lightest);
+    background: rgba(255, 255, 255, 0.11);
+    color: var(--lightest);
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h3{
+    font-size: 25px;
+    font-weight: 700;
+    color: var(--lightest);
+}
+
+button:hover, .rbtn:hover {
+    background: var(--lightest);
+    color: var(--darkest);
+}
+
+/* Specialized Links/Nav */
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+#d, #e, .bnt {
+    color: #fff;
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px 20px;
+    border-radius: 8px;
+    
+    font-size: 14px;
+
+}
+
+#d:hover, #e:hover, .bnt:hover {
+    color: var(--darkest);
+    background: var(--lightest);
+}
+
+/* Slider / Range Styling */
+.slider {
+    width: 100%;
+    appearance: none;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    outline: none;
+    margin: 20px 0;
+}
+
+.slider::-webkit-slider-thumb {
+    appearance: none;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--acent-color);
+    cursor: pointer;
+    border: 2px solid var(--lightest);
+}
+nav{
+    display: flex;
+    gap: 10px;
+}
+
+/* Responsive Logic */
+@media (max-width: 1024px) {
+    .row {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    
+
+    .scroll {
+        height: max-content;
+    }
+}
+.rowx{
+
+    flex-wrap: nowrap;
+
+    display: flex;
+
+    flex-direction: row;
+
+    width: 100%;
+
+    align-items: center;
+
+    justify-content: center;
+
+   
+
+   
+
+}
+.row{
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: end;
+
+    width: 100%;
+
+    flex-direction: row;
+
+   
+
+}
+
+.controls{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
